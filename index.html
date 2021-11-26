@@ -33,7 +33,7 @@
 
                 <div class="img-container">
                     <div class="thumber-nail " v-for="(image,i) in images" :class="i == counter ? 'active-t' : '' ">
-                        <img :src="image" alt="" class="pictures-thumb">
+                        <img @click="counter = i" :src="image" alt="" class="pictures-thumb">
                 </div>
                 </div>
 
