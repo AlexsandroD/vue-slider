@@ -1,0 +1,149 @@
+/* ---commons---- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ----contenitori---- */
+.container {
+    display: flex;
+    margin: auto;
+    height: 100vh;
+    align-items: center;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    height: 70vh;
+}
+
+
+/* ---colonne--- */
+.col-1 {
+    width: 80%;
+    position: relative;
+}
+
+.col-2 {
+    width: 20%;
+    position: relative;
+
+}
+
+.img-container-main {
+    height: 100%;
+    display: none;
+}
+
+.img-container {
+    height: 100%;
+}
+
+
+#arrow-up,
+#arrow-down {
+    position: absolute;
+    left: 50%;
+    background-color: white;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+
+/* --freccette--- */
+
+#arrow-up i,
+#arrow-down i {}
+
+#arrow-up {
+    top: 10px
+}
+
+#arrow-down {
+    bottom: 10px;
+
+}
+
+.thumber-nail {
+    width: 100%;
+    height: calc(100% / 5);
+    filter: brightness(50%);
+
+}
+
+/* ---testo --- */
+.text {
+    position: absolute;
+    bottom: 0px;
+    height: 20%;
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    overflow-y: hidden;
+    color: white;
+}
+
+
+/* ---foto---- */
+
+.pictures-main {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pictures-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/* --- classi active---  */
+.img-container-main.active {
+    display: block;
+}
+
+.active-t {
+    position: relative;
+    filter: brightness(100%);
+    outline: 3px solid white;
+    outline-offset: -4px;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+/* ---fine classi active--- */
+
+/* ----debug section -----  */
+
+
+/* .debug .container{
+    background-color: aqua;
+}
+.debug .row{
+    background-color: yellow;
+}
+.col-1, .col-2{
+    background-color: blueviolet;
+    border: 1px solid black;
+}
+/* .debug .thumber-nail{
+    border: 1px solid black;
+    background-color: yellow;
+} */
+
+/* .debug .text{
+    background-color: chartreuse;
+} */
