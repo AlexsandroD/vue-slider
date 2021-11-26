@@ -13,36 +13,36 @@
   
   
     <div id="root">
-      
-    <div class="container">
-        <div class="row">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-1">
+                
+                    <div class="img-container-main active">         
+                        <img class="pictures-main" :src="images[counter]" :alt="title[counter]">
+                        <div class="text">
+                            <h1 class="city">{{title[counter]}}</h1>
+                            <p class="description">{{description[counter]}}</p>
+                        </div>
+                    </div>
+
+                </div>
             
-            <div class="col-1">
-               
-                   <div class="img-container-main active">
-                    <img class="pictures-main" :src="images[counter]"  :alt="title[counter]">
-                    <div class="text">
-                    <h1 class="city">{{title[counter]}}</h1>
-                    <p class="description">{{description[counter]}}</p>
+                <div class="col-2">
+
+                    <div class="img-container">
+                        <div class="thumber-nail " v-for="(image,i) in images" :class="i == counter ? 'active-t' : '' ">
+                            <img @click="selectImg(i)" :src="image" alt="" class="pictures-thumb">
                     </div>
                     </div>
 
-            </div>
-           
-            <div class="col-2">
+                    <div @click='prev()' id="arrow-up"><i class="fas fa-chevron-up"></i></div>
+                    
+                    <div @click="next()" id="arrow-down"><i class="fas fa-chevron-down"></i></div>
 
-                <div class="img-container">
-                    <div class="thumber-nail " v-for="(image,i) in images" :class="i == counter ? 'active-t' : '' ">
-                        <img @click="counter = i" :src="image" alt="" class="pictures-thumb">
                 </div>
-                </div>
-
-                <div @click='prev()' id="arrow-up"><i class="fas fa-chevron-up"></i></div>
-                <div @click="next()" id="arrow-down"><i class="fas fa-chevron-down"></i></div>
-
             </div>
         </div>
-    </div>
 
     </div>
 
@@ -50,3 +50,31 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+ // array: [{
+        //             images: "./img/01.jpg",
+        //             title: "Svezia",
+        //             description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+        //         },
+        //         {
+        //             images: "./img/02.jpg",
+        //             title: "Svizzera",
+        //             description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+        //         },
+
+        //         {
+        //             images: "./img/03.jpg",
+        //             title: "Gran Bretagna",
+        //             description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+        //         },
+        //         {
+        //             images: "./img/04.jpg",
+        //             title: "Germania",
+        //             description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+        //         },
+        //         {
+        //             images: "./img/05.jpg",
+        //             title: "Paradise",
+        //             description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+        //         }
+        //         ],
