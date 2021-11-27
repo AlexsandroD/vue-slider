@@ -2,29 +2,34 @@ const app = new Vue({
     el: '#root',
     data: {
         
-        images: [
-            './img/01.jpg',
-            './img/02.jpg',
-            './img/03.jpg',
-            './img/04.jpg',
-            './img/05.jpg',
-        ],
+slides: [
+    {
+                        images: "./img/01.jpg",
+                        title: "Svezia",
+                        description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+                    },
+                    {
+                        images: "./img/02.jpg",
+                        title: "Svizzera",
+                        description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+                    },
 
-        title: [
-            'Svezia',
-            'Svizzera',
-            'Gran Bretagna',
-            'Germania',
-            'Paradise'
-        ],
-
-        description: [
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-            'Lorem ipsum',
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-            'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-        ],
+                    {
+                        images: "./img/03.jpg",
+                        title: "Gran Bretagna",
+                        description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+                    },
+                    {
+                        images: "./img/04.jpg",
+                        title: "Germania",
+                        description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+                    },
+                    {
+                        images: "./img/05.jpg",
+                        title: "Paradise",
+                        description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+                    }
+                    ],
 
 
         counter: 0,
@@ -35,7 +40,7 @@ const app = new Vue({
     methods: {
         prev: function () {
             if (this.counter == 0) {
-                this.counter = this.images.length - 1;
+                this.counter = this.slides.length - 1;
                 this.resetPlay();
             } else {
                 this.counter--;
@@ -43,7 +48,7 @@ const app = new Vue({
         },
 
         next: function () {
-            if (this.counter == this.images.length - 1) {
+            if (this.counter == this.slides.length - 1) {
                 this.counter = 0;
                 this.resetPlay();
 

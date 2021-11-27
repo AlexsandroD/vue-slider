@@ -19,10 +19,10 @@
                 <div class="col-1">
                 
                     <div class="img-container-main active">         
-                        <img class="pictures-main" :src="images[counter]" :alt="title[counter]">
+                        <img class="pictures-main " :src="slides[counter].images">
                         <div class="text">
-                            <h1 class="city">{{title[counter]}}</h1>
-                            <p class="description">{{description[counter]}}</p>
+                            <h1 class="city">{{slides[counter].title}}</h1>
+                            <p class="description">{{slides[counter].description}}</p>
                         </div>
                     </div>
 
@@ -31,9 +31,9 @@
                 <div class="col-2">
 
                     <div class="img-container">
-                        <div class="thumber-nail " v-for="(image,i) in images" :class="i == counter ? 'active-t' : '' ">
-                            <img @click="selectImg(i)" :src="image" alt="" class="pictures-thumb">
-                    </div>
+                        <div class="thumber-nail"v-for='(slide ,i) in slides' :class="i == counter ? 'active-t' : '' ">
+                            <img class="pictures-thumb" :src="slide.images" @click="selectImg(i)">
+                        </div>
                     </div>
 
                     <div @click='prev()' id="arrow-up"><i class="fas fa-chevron-up"></i></div>
@@ -51,7 +51,7 @@
 </body>
 </html>
 
- // array: [{
+ <!-- // array: [{
         //             images: "./img/01.jpg",
         //             title: "Svezia",
         //             description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
@@ -77,4 +77,4 @@
         //             title: "Paradise",
         //             description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
         //         }
-        //         ],
+        //         ], -->
