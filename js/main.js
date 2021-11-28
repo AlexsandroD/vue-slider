@@ -1,41 +1,43 @@
 const app = new Vue({
     el: '#root',
     data: {
-        
-slides: [
-    {
-                        images: "./img/01.jpg",
-                        title: "Svezia",
-                        description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
-                    },
-                    {
-                        images: "./img/02.jpg",
-                        title: "Svizzera",
-                        description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
-                    },
 
-                    {
-                        images: "./img/03.jpg",
-                        title: "Gran Bretagna",
-                        description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
-                    },
-                    {
-                        images: "./img/04.jpg",
-                        title: "Germania",
-                        description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
-                    },
-                    {
-                        images: "./img/05.jpg",
-                        title: "Paradise",
-                        description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
-                    }
-                    ],
+        slides: [{
+                images: "./img/01.jpg",
+                title: "Svezia",
+                description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+            },
+            {
+                images: "./img/02.jpg",
+                title: "Svizzera",
+                description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+            },
+
+            {
+                images: "./img/03.jpg",
+                title: "Gran Bretagna",
+                description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+            },
+            {
+                images: "./img/04.jpg",
+                title: "Germania",
+                description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+            },
+            {
+                images: "./img/05.jpg",
+                title: "Paradise",
+                description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'"
+            }
+        ],
 
 
         counter: 0,
         timer: 0,
 
-
+    },
+    
+    mounted: function () {
+        this.play();
     },
     methods: {
         prev: function () {
@@ -72,26 +74,27 @@ slides: [
             clearInterval(this.timer);
             this.play();
         },
-        
-        created: function () {
-            this.play();
+
+        stopSlider: function(){
+            clearInterval(this.timer);
         }
+
     }
-        
-        
-        
-        
-        
-        // ---aggiungi classe active utilizzando una funzione----
-        
-        // setActiveClass: function (index){
-            //     if(index == this.counter){
-                //         return 'active-t';
-                //     }else{
-                    //         return '';
-                    //     }
-                    // }
-                    
-                    
-    });
-                
+
+
+
+
+
+    // ---aggiungi classe active utilizzando una funzione----
+
+    // setActiveClass: function (index){
+    //     if(index == this.counter){
+    //         return 'active-t';
+    //     }else{
+    //         return '';
+    //     }
+    // }
+
+
+});
+
