@@ -4,34 +4,39 @@ const app = new Vue({
 
         slides: [{
                 images: "https://www.nerdevil.it/wp-content/uploads/2021/11/resident-evil-welcome-to-raccoon-city-recensione-nerdevil.jpg",
-                title: "Svezia",
-                description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'",
-                link: 'https://www.youtube.com/watch?v=IQqqAWMIIAQ&ab_channel=SonyPicturesEntertainment'
+                title: "Resident Evil: Welcome to Raccoon city",
+                description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et .'",
+                link: 'https://www.youtube.com/watch?v=IQqqAWMIIAQ&ab_channel=SonyPicturesEntertainment',
+                color: 'red'
             },
             {
                 images: "https://cdn.corrieredellosport.it/img/990/495/2021/11/25/155647579-612ac94f-5870-4e4d-87bd-7666e54ea867.jpg",
-                title: "Svizzera",
+                title: "Call of duty Vanguard",
                 description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'",
-                link: 'https://www.callofduty.com/it'
+                link: 'https://www.callofduty.com/it',
+                color: 'white'
             },
 
             {
                 images: "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_DEATHLOOP_ArkaneStudios_S1_2560x1440-bf6d342edbd2411ccf24e326852fca93",
-                title: "Gran Bretagna",
+                title: "Death Loop",
                 description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'",
-                link: 'https://bethesda.net/it/game/deathloop'
+                link: 'https://bethesda.net/it/game/deathloop',
+                color: 'black'
             },
             {
                 images: "https://compass-ssl.xbox.com/assets/9c/94/9c944d9c-7ef1-4b46-9f68-9b02966d3993.jpg?n=Halo-Infinite_GLP-Page-Hero-0_1083x609.jpg",
-                title: "Germania",
+                title: "Halo Infinite",
                 description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'",
-                link: 'https://store.steampowered.com/app/1240440/Halo_Infinite/'
+                link: 'https://store.steampowered.com/app/1240440/Halo_Infinite/',
+                color: 'white'
             },
             {
                 images: "https://compass-ssl.xbox.com/assets/1c/80/1c80258b-70a2-49b9-b209-81c0e377862c.jpg?n=The-Medium_GLP-Page-Hero-1084_1920x1080_03.jpg",
-                title: "Paradise",
+                title: "Medium",
                 description: "'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'",
-                link: 'https://www.youtube.com/watch?v=PJi-7Ue_7ms&ab_channel=BlooberTeam'
+                link: 'https://www.youtube.com/watch?v=PJi-7Ue_7ms&ab_channel=BlooberTeam',
+                color: 'white'
             }
         ],
 
@@ -49,7 +54,7 @@ const app = new Vue({
         prev: function () {
             if (this.counter == 0) {
                 this.counter = this.slides.length - 1;
-                this.resetPlay();
+                // this.resetPlay();
             } else {
                 this.counter--;
             }
@@ -58,7 +63,7 @@ const app = new Vue({
         next: function () {
             if (this.counter == this.slides.length - 1) {
                 this.counter = 0;
-                this.resetPlay();
+                // this.resetPlay();
 
             } else {
                 this.counter++
@@ -67,14 +72,14 @@ const app = new Vue({
 
         selectImg: function (index) {
             this.counter = index;
-            this.resetPlay();
+            // this.resetPlay();
         },
 
         play: function () {
             let app = this;
             this.timer = setInterval(function () {
                 app.next();
-            }, 2000);
+            }, 3000);
         },
         resetPlay: function () {
             clearInterval(this.timer);

@@ -8,6 +8,9 @@
 
 body {
     background-color: black;
+    font-family:'Montserrat',
+    sans-serif;
+    
 }
 
 
@@ -50,7 +53,10 @@ body {
     display: flex;
     justify-content: center;
     height: 100%;
-    display: none;
+    display: block;
+    transform: scale(1, 1.01);
+    transition: 0.5s;
+       
 }
 
 .img-container {
@@ -105,13 +111,16 @@ body {
 /* ---testo --- */
 .text {
     position: absolute;
-    bottom: 0px;
-    height: 20%;
-    width: 100%;
+    bottom: 20px;
+    right: 10px;
+    height: 30%;
+    width: 50%;
     padding: 10px;
     text-align: right;
     overflow-y: hidden;
-    color: white;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: '';
 }
 
 
@@ -121,6 +130,11 @@ body {
     width: 100%;
     height: 500px;
     border-radius: 25px;
+}
+
+.img-container-main:hover .text {
+    width: 100%;
+
 }
 
 .pictures-thumb {
@@ -133,12 +147,6 @@ body {
 }
 
 /* --- classi active---  */
-.img-container-main.active {
-    display: block;
-    transform: scale(1, 1.01);
-    transition: 0.2s;
-}
-
 .active-t {
     position: relative;
     filter: brightness(100%);
@@ -147,6 +155,27 @@ body {
     transition: 0.2s;
 }
 
+.orange{
+    color: #F38938;
+}
+
+.white{
+    color: #ffffff;
+}
+
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+.yellow{
+    color: #C12123;
+}
+
+.black{
+    color: black;
+}
 
 
 /* ---fine classi active--- */
