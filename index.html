@@ -19,10 +19,10 @@
                 <div class="col-1">
                 
                     <div class="img-container-main active">         
-                        <img class="pictures-main " :src="slides[counter].images">
+                        <a :href="slides[counter].link" target="_blank"><img class="pictures-main " :src="slides[counter].images"></a>
                         <div class="text">
-                            <h1 class="city">{{slides[counter].title}}</h1>
-                            <p class="description">{{slides[counter].description}}</p>
+                            <!-- <h1 class="city">{{slides[counter].title}}</h1>
+                            <p class="description">{{slides[counter].description}}</p> -->
                         </div>
                     </div>
 
@@ -36,9 +36,9 @@
                         </div>
                     </div>
 
-                    <div @click='prev()' id="arrow-up"><i class="fas fa-chevron-up"></i></div>
+                    <div  @click='prev()' id="arrow-up"><i class="fas fa-chevron-left" ></i></div>
                     
-                    <div @click="next()" id="arrow-down"><i class="fas fa-chevron-down"></i></div>
+                    <div @click="next()" id="arrow-down"><i class="fas fa-chevron-right"></i></div>
 
                 </div>
             </div>
