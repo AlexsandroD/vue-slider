@@ -35,8 +35,8 @@ const app = new Vue({
         timer: 0,
 
     },
-    
-    mounted: function () {
+
+    created: function () {
         this.play();
     },
     methods: {
